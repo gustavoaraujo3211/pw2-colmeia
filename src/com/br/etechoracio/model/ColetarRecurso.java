@@ -1,4 +1,5 @@
 package src.com.br.etechoracio.model;
 
-public interface ColetarRecurso {
+public interface ColetarRecurso{
+    void coletarRecursos();
 }

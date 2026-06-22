@@ -1,6 +1,6 @@
 package src.com.br.etechoracio.model;
 
-public class Operaria extends Abelha{
+public class Operaria extends Abelha implements ColetarRecurso, DefenderColmeia {
     private int tempovoo;
 
     public Operaria(String nome, int idade, int duracaoVoo) {
@@ -22,5 +22,15 @@ public class Operaria extends Abelha{
     public void exibirInfos() {
         super.exibirInfos();
         System.out.println(" | Tipo: Operária / tempo de voo: " + tempovoo);
+    }
+
+    @Override
+    public void coletarRecursos() {
+        System.out.println("Coletando néctar nas flores.");
+    }
+
+    @Override
+    public void defenderColmeia() {
+        System.out.println("Defendendo a entrada da colmeia.");
     }
 }

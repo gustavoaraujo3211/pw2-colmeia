@@ -1,6 +1,6 @@
 package src.com.br.etechoracio.model;
 
-public class Zangao extends Abelha{
+public class Zangao extends Abelha implements DefenderColmeia {
     private int voosDeAcasalamento;
 
     public Zangao(String nome, int idade, int voosDeAcasalamento) {
@@ -22,5 +22,9 @@ public class Zangao extends Abelha{
     public void exibirInfos() {
         super.exibirInfos();
         System.out.println("Tipo: Zangão / Voos de Acasalamento: " + voosDeAcasalamento);
+    }
+    @Override
+    public void defenderColmeia() {
+        System.out.println("Defendendo a entrada da colmeia.");
     }
 }
